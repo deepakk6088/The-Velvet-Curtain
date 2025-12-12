@@ -1162,4 +1162,207 @@
            TICKETS PAGE
            ======================================== */
         
+        .tickets-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ticket-step {
+            background: var(--color-velvet-light);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .ticket-step-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-gold);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-black);
+        }
+
+        .step-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--color-cream);
+        }
+
+        .show-select-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .show-option {
+            padding: var(--spacing-md);
+            background: rgba(212, 175, 55, 0.05);
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+
+        .show-option:hover,
+        .show-option.selected {
+            border-color: var(--color-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .show-option-title {
+            font-family: var(--font-display);
+            color: var(--color-cream);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .show-option-date {
+            color: var(--color-gray-400);
+            font-size: 0.875rem;
+        }
+
+        .ticket-summary {
+            background: linear-gradient(135deg, var(--color-crimson-dark), var(--color-crimson));
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid rgba(255, 253, 208, 0.1);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-gold);
+        }
+
+        /* ========================================
+           AUDITIONS PAGE
+           ======================================== */
         
+        .auditions-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--color-velvet-light);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-section {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .form-section-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--color-gold);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            cursor: pointer;
+            color: var(--color-cream);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--color-gold);
+        }
+
+        /* ========================================
+           ANIMATIONS
+           ======================================== */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
